@@ -1,9 +1,8 @@
+import { OnlinesHome } from "@/components/sites/onlines/OnlinesHome";
+import "./collection.css";
+import "./project-cards.css";
+import "./reviews.css";
+
 export default function Home() {
-  return (
-    <main className="flex min-h-screen items-center justify-center">
-      <p className="text-muted-foreground">
-        Clone target not yet built. Run <code className="font-mono text-foreground">/clone-website</code> to start.
-      </p>
-    </main>
-  );
+  return <OnlinesHome />;
 }

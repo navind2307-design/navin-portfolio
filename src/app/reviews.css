@@ -1,0 +1,512 @@
+/* ==========================================================================
+   Reviews — dark section on the home page.
+   Every rule is scoped to #reviews / .rv-* or to the header's dark state.
+   ========================================================================== */
+
+.rv-section {
+  --rv-bg: #06143a;
+  --rv-ink: #141414;
+  --rv-muted: #8a8a8f;
+  --rv-blue: #0b57e0;
+  --rv-gold: #f5b301;
+
+  position: relative;
+  isolation: isolate;
+  /* Inset dark panel: clear space above/below and on both sides. */
+  margin: 96px 24px 32px;
+  overflow: hidden;
+  color: #fff;
+  background: var(--rv-bg);
+  color-scheme: dark;
+  border-radius: 32px;
+}
+
+.rv-section *,
+.rv-section *::before,
+.rv-section *::after {
+  box-sizing: border-box;
+}
+
+.rv-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.rv-mono {
+  font-family: var(--wp--preset--font-family--jetbrains-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* 1px markers used only by the IntersectionObserver that drives the nav. */
+.rv-nav-sentinel {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.rv-nav-sentinel--bottom {
+  top: auto;
+  bottom: 0;
+}
+
+.rv-bg {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: linear-gradient(135deg, #061a4a, #0a3fae 55%, #0b57e0);
+}
+
+.rv-media {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.rv-shade {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 10, 32, 0.72) 0,
+      rgba(4, 10, 32, 0.35) 55%,
+      rgba(4, 10, 32, 0.2) 100%
+    ),
+    linear-gradient(to top, rgba(4, 10, 32, 0.55), transparent 35%);
+}
+
+.rv-wrap {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1180px;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0 auto;
+  padding: 72px 28px;
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 540px);
+  gap: 64px;
+  align-items: stretch;
+}
+
+.rv-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 28px;
+}
+
+.rv-pill {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--rv-ink);
+  font-size: 11px;
+}
+
+.rv-heading {
+  margin: 0;
+  max-width: 11.5em;
+  color: #fff;
+  font-family: var(--wp--preset--font-family--inter-display);
+  font-weight: 700;
+  font-size: clamp(34px, 4.8vw, 62px);
+  line-height: 1.03;
+  letter-spacing: -0.045em;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.5);
+}
+
+.rv-stars {
+  display: inline-flex;
+  gap: 1px;
+  color: #d9d9de;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.rv-stars .is-on {
+  color: var(--rv-gold);
+}
+
+.rv-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.rv-win {
+  height: clamp(290px, 46vh, 390px);
+  overflow: hidden;
+  outline: none;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    #000 6%,
+    #000 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    #000 6%,
+    #000 90%,
+    transparent 100%
+  );
+}
+
+.rv-win:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+  border-radius: 14px;
+}
+
+.rv-track {
+  animation-name: rv-up;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 0s;
+}
+
+.rv-section:not(.is-active) .rv-track {
+  animation-play-state: paused;
+}
+
+.rv-section.is-active .rv-track {
+  animation-play-state: running;
+}
+
+.rv-section .rv-panel:hover .rv-track,
+.rv-section .rv-panel:focus-within .rv-track {
+  animation-play-state: paused;
+}
+
+@keyframes rv-up {
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+.rv-card {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 13px;
+  margin-bottom: 12px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--rv-ink);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+}
+
+.rv-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.rv-card__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.rv-card__top b {
+  font-size: 14.5px;
+  font-weight: 600;
+}
+
+.rv-card__top .rv-mono {
+  font-size: 10px;
+  color: var(--rv-muted);
+  white-space: nowrap;
+}
+
+.rv-card .rv-stars {
+  margin-top: 3px;
+  font-size: 13px;
+}
+
+.rv-card p {
+  margin: 7px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #2a2a2e;
+}
+
+.rv-card.is-fresh {
+  animation: rv-pop 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.9),
+    0 14px 34px rgba(11, 87, 224, 0.5);
+}
+
+@keyframes rv-pop {
+  from {
+    opacity: 0;
+    transform: translateY(-24px) scale(0.97);
+  }
+}
+
+.rv-compose {
+  padding: 14px;
+  border-radius: 18px;
+  background: #fff;
+  color: var(--rv-ink);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+}
+
+.rv-compose__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.rv-compose__head .rv-mono {
+  font-size: 10.5px;
+  color: var(--rv-muted);
+}
+
+.rv-pick {
+  display: flex;
+  gap: 2px;
+}
+
+.rv-pick button {
+  border: 0;
+  background: none;
+  padding: 2px;
+  font-size: 22px;
+  line-height: 1;
+  color: #d9d9de;
+  cursor: pointer;
+  transition:
+    transform 0.15s,
+    color 0.15s;
+}
+
+.rv-pick button.is-on {
+  color: var(--rv-gold);
+}
+
+.rv-pick button:hover {
+  transform: scale(1.15);
+}
+
+.rv-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 6px 6px 14px;
+  border-radius: 14px;
+  background: #f2f4f8;
+  border: 1px solid transparent;
+  transition:
+    border-color 0.25s,
+    box-shadow 0.25s,
+    background 0.25s;
+}
+
+.rv-bar:focus-within {
+  background: #fff;
+  border-color: var(--rv-blue);
+  box-shadow: 0 0 0 4px rgba(11, 87, 224, 0.12);
+}
+
+.rv-bar input {
+  min-width: 0;
+  height: 44px;
+  background: none;
+  border: 0;
+  outline: none;
+  color: var(--rv-ink);
+  font: 400 15px var(--wp--preset--font-family--inter-display);
+}
+
+.rv-bar .rv-bar__name {
+  flex: 0 0 104px;
+  border-right: 1px solid #dfe3ea;
+  padding-right: 10px;
+}
+
+.rv-bar .rv-bar__text {
+  flex: 1;
+  padding-left: 6px;
+}
+
+.rv-bar input::placeholder {
+  color: #9aa0ac;
+}
+
+.rv-send {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--rv-blue);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    filter 0.2s;
+}
+
+.rv-send:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+}
+
+.rv-msg {
+  min-height: 20px;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #53628a;
+}
+
+@media (max-width: 900px) {
+  .rv-section {
+    margin: 64px 16px 24px;
+    border-radius: 24px;
+  }
+
+  .rv-wrap {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    min-height: 0;
+    padding: 56px 20px;
+  }
+
+  .rv-left {
+    align-self: auto;
+    justify-content: flex-start;
+    gap: 22px;
+  }
+
+  .rv-win {
+    height: clamp(280px, 48vh, 380px);
+  }
+}
+
+@media (max-width: 520px) {
+  .rv-bar {
+    flex-wrap: wrap;
+    padding: 8px 8px 8px 14px;
+  }
+
+  .rv-bar .rv-bar__name {
+    flex: 1 1 100%;
+    border-right: 0;
+    border-bottom: 1px solid #dfe3ea;
+    padding: 0 0 4px;
+    height: 38px;
+  }
+
+  .rv-bar .rv-bar__name,
+  .rv-bar .rv-bar__text {
+    height: 40px;
+  }
+
+  .rv-bar .rv-bar__text {
+    padding-left: 0;
+  }
+}
+
+/* ---- Fixed nav inversion while the dark section is behind it ---------- */
+html .header .header__nav-link,
+html .header .header__btn-call .wp-block-button__link {
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+html:not(.is-collection-dark) .header .header__nav-link,
+html .header.is-reviews-dark .header__nav-link {
+  transition-delay: 0s;
+}
+
+html .header.is-reviews-dark .header__nav-link {
+  color: #f4f4f4;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45);
+}
+
+html .header.is-reviews-dark .header__nav-link:hover {
+  color: #fff;
+}
+
+html .header.is-reviews-dark .header__nav-link:focus-visible {
+  outline-color: #fff;
+}
+
+html .header.is-reviews-dark .header-logo svg * {
+  fill: #f4f4f4;
+}
+
+html .header.is-reviews-dark .header__btn-call .wp-block-button__link {
+  color: #f4f4f4 !important;
+  background-color: rgba(4, 10, 32, 0.72) !important;
+  box-shadow: inset 0 0 0 1px rgba(244, 244, 244, 0.28);
+}
+
+html .header.is-reviews-dark
+  .header__btn-call
+  .wp-block-button__link:hover {
+  color: #fff !important;
+  background-color: rgba(11, 87, 224, 0.92) !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rv-section .rv-track,
+  .rv-section .rv-card.is-fresh {
+    animation: none !important;
+  }
+
+  .rv-section .rv-win {
+    overflow-y: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .rv-section *,
+  .rv-section *::before,
+  .rv-section *::after {
+    transition-duration: 0.01s !important;
+  }
+
+  html .header .header__nav-link,
+  html .header .header__btn-call .wp-block-button__link {
+    transition-duration: 0.01s !important;
+    transition-delay: 0s !important;
+  }
+}

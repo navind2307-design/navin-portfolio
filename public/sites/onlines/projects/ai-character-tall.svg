@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 1300" width="700" height="1300" role="img" aria-label="AI character generation and animation">
+  <defs>
+    <linearGradient id="at-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#03070c"/>
+      <stop offset="0.55" stop-color="#061b2c"/>
+      <stop offset="1" stop-color="#0a3341"/>
+    </linearGradient>
+    <radialGradient id="at-glow1" cx="0.35" cy="0.52" r="0.5">
+      <stop offset="0" stop-color="#00d8c0" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#00d8c0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="at-glow2" cx="0.78" cy="0.66" r="0.45">
+      <stop offset="0" stop-color="#ff3fb4" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#ff3fb4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="at-skin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd9c2"/>
+      <stop offset="1" stop-color="#c98b74"/>
+    </linearGradient>
+    <linearGradient id="at-hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#132533"/>
+      <stop offset="1" stop-color="#050a10"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="700" height="1300" fill="url(#at-bg)"/>
+  <rect width="700" height="1300" fill="url(#at-glow1)"/>
+  <rect width="700" height="1300" fill="url(#at-glow2)"/>
+
+  <g opacity="0.18" stroke="#9ff7e6" stroke-width="1" fill="none">
+    <circle cx="350" cy="660" r="240"/>
+    <circle cx="350" cy="660" r="310"/>
+    <circle cx="350" cy="660" r="380"/>
+    <path d="M40 660H660M350 200V1120"/>
+  </g>
+
+  <g font-family="Inter, Arial, Helvetica, sans-serif">
+    <text x="48" y="92" fill="#94ffaf" font-size="15" letter-spacing="5">02 / AI CHARACTERS</text>
+    <text x="44" y="168" fill="#ffffff" font-size="62" font-weight="700" letter-spacing="-2">AI CHARACTERS</text>
+    <text x="48" y="204" fill="#9ff7e6" font-size="16" letter-spacing="5">GENERATION &amp; ANIMATION</text>
+  </g>
+
+  <g transform="translate(350 700)">
+    <ellipse cx="0" cy="440" rx="190" ry="30" fill="#000000" opacity="0.42"/>
+    <path d="M-150 440C-150 320 -85 250 0 250C85 250 150 320 150 440Z" fill="#0b1a24"/>
+    <rect x="-30" y="120" width="60" height="160" rx="30" fill="url(#at-skin)"/>
+    <ellipse cx="0" cy="0" rx="150" ry="178" fill="url(#at-skin)"/>
+    <path d="M-152 0C-152 -145 -82 -224 0 -224C82 -224 152 -145 152 0C152 -60 118 -104 78 -118C48 -56 -48 -56 -78 -118C-118 -104 -152 -60 -152 0Z" fill="url(#at-hair)"/>
+    <path d="M-152 0C-158 84 -134 146 -100 176C-118 114 -118 54 -108 6Z" fill="url(#at-hair)"/>
+    <path d="M152 0C158 84 134 146 100 176C118 114 118 54 108 6Z" fill="url(#at-hair)"/>
+    <ellipse cx="-52" cy="22" rx="15" ry="10" fill="#1a2c38"/>
+    <ellipse cx="52" cy="22" rx="15" ry="10" fill="#1a2c38"/>
+    <path d="M-24 96C-10 112 10 112 24 96" stroke="#8d4b41" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <path d="M132 -60C158 -42 172 -14 176 18" stroke="#00e0c6" stroke-width="6" fill="none" opacity="0.85"/>
+    <path d="M-132 -60C-158 -42 -172 -14 -176 18" stroke="#ff3fb4" stroke-width="6" fill="none" opacity="0.75"/>
+  </g>
+
+  <g transform="translate(76 1092)">
+    <rect width="120" height="120" rx="18" fill="#0a1a24" stroke="#1f4650" stroke-width="2"/>
+    <ellipse cx="60" cy="52" rx="30" ry="34" fill="#c98b74"/>
+    <path d="M30 52C30 24 44 12 60 12C76 12 90 24 90 52C90 34 76 26 60 26C44 26 30 34 30 52Z" fill="#132533"/>
+    <rect x="136" width="120" height="120" rx="18" fill="#0a1f22" stroke="#1f5048" stroke-width="2"/>
+    <ellipse cx="196" cy="52" rx="30" ry="34" fill="#7ec9b8"/>
+    <path d="M166 52C166 24 180 12 196 12C212 12 226 24 226 52C226 34 212 26 196 26C180 26 166 34 166 52Z" fill="#1b4a52"/>
+    <rect x="272" width="120" height="120" rx="18" fill="#150f22" stroke="#3e2a58" stroke-width="2"/>
+    <ellipse cx="332" cy="52" rx="30" ry="34" fill="#9a6bd1"/>
+    <path d="M302 52C302 24 316 12 332 12C348 12 362 24 362 52C362 34 348 26 332 26C316 26 302 34 302 52Z" fill="#432c5c"/>
+  </g>
+
+  <g font-family="Inter, Arial, Helvetica, sans-serif">
+    <text x="440" y="1148" fill="#c3e9e2" font-size="18" letter-spacing="3" opacity="0.75">CONSISTENT</text>
+    <text x="440" y="1180" fill="#c3e9e2" font-size="18" letter-spacing="3" opacity="0.75">IDENTITIES</text>
+    <text x="440" y="1216" fill="#94ffaf" font-size="14" letter-spacing="4">BUILT TO MOVE</text>
+  </g>
+</svg>

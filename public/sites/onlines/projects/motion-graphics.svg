@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1000" width="1200" height="1000" role="img" aria-label="Motion graphics and visual storytelling">
+  <defs>
+    <linearGradient id="m-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#030307"/>
+      <stop offset="0.55" stop-color="#0a0618"/>
+      <stop offset="1" stop-color="#050b1c"/>
+    </linearGradient>
+    <radialGradient id="m-glow1" cx="0.2" cy="0.3" r="0.5">
+      <stop offset="0" stop-color="#1f6bff" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#1f6bff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="m-glow2" cx="0.82" cy="0.72" r="0.5">
+      <stop offset="0" stop-color="#e94bff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#e94bff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="m-ribbon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38d6ff" stop-opacity="0"/>
+      <stop offset="0.35" stop-color="#38d6ff"/>
+      <stop offset="0.7" stop-color="#94ffaf"/>
+      <stop offset="1" stop-color="#94ffaf" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="m-ribbon2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e94bff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#e94bff"/>
+      <stop offset="1" stop-color="#ff8a3d" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="1000" fill="url(#m-bg)"/>
+  <rect width="1200" height="1000" fill="url(#m-glow1)"/>
+  <rect width="1200" height="1000" fill="url(#m-glow2)"/>
+
+  <g opacity="0.2" stroke="#7ea4ff" stroke-width="1">
+    <path d="M0 200H1200M0 400H1200M0 600H1200M0 800H1200"/>
+  </g>
+
+  <g transform="rotate(-7 600 520)">
+    <text x="92" y="470" fill="none" stroke="#38d6ff" stroke-width="2" opacity="0.55" font-family="Inter, Arial, Helvetica, sans-serif" font-size="228" font-weight="800" letter-spacing="-10">MOTION</text>
+    <text x="112" y="492" fill="none" stroke="#e94bff" stroke-width="2" opacity="0.5" font-family="Inter, Arial, Helvetica, sans-serif" font-size="228" font-weight="800" letter-spacing="-10">MOTION</text>
+    <text x="70" y="480" fill="#ffffff" font-family="Inter, Arial, Helvetica, sans-serif" font-size="228" font-weight="800" letter-spacing="-10">MOTION</text>
+    <text x="86" y="650" fill="#94ffaf" font-family="Inter, Arial, Helvetica, sans-serif" font-size="92" font-weight="600" letter-spacing="18">STORY</text>
+  </g>
+
+  <path d="M-60 780C220 640 420 940 700 800C900 706 1040 760 1260 660" stroke="url(#m-ribbon)" stroke-width="3" fill="none"/>
+  <path d="M-60 830C240 700 430 980 720 840C920 746 1060 800 1260 700" stroke="url(#m-ribbon2)" stroke-width="2" fill="none" opacity="0.8"/>
+
+  <g fill="#ffffff" opacity="0.6">
+    <rect x="840" y="150" width="220" height="4" rx="2"/>
+    <rect x="880" y="170" width="140" height="4" rx="2"/>
+    <rect x="900" y="190" width="180" height="4" rx="2"/>
+    <rect x="860" y="210" width="100" height="4" rx="2"/>
+  </g>
+
+  <g font-family="Inter, Arial, Helvetica, sans-serif">
+    <text x="80" y="150" fill="#94ffaf" font-size="20" letter-spacing="6">03 / MOTION DESIGN</text>
+    <text x="80" y="196" fill="#b9c7ef" font-size="22" letter-spacing="4" opacity="0.72">TYPOGRAPHY / RHYTHM / AI VISUALS</text>
+    <text x="932" y="900" fill="#7ea4ff" font-size="18" letter-spacing="5">FRAME 024</text>
+  </g>
+
+  <g opacity="0.9">
+    <circle cx="1080" cy="880" r="26" fill="none" stroke="#94ffaf" stroke-width="2"/>
+    <circle cx="1080" cy="880" r="8" fill="#94ffaf"/>
+  </g>
+</svg>

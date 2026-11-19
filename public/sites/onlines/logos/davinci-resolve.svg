@@ -1,0 +1,6 @@
+<svg width="250" height="46" viewBox="0 0 250 46" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DaVinci Resolve">
+  <circle cx="23" cy="23" r="21" fill="#121213"/>
+  <circle cx="23" cy="23" r="13" fill="none" stroke="#FF6A3D" stroke-width="4"/>
+  <circle cx="23" cy="23" r="5" fill="#94FFAF"/>
+  <text x="60" y="31" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="#121213">DaVinci Resolve</text>
+</svg>

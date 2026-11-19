@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1000" width="1200" height="1000" role="img" aria-label="AI character generation and animation">
+  <defs>
+    <linearGradient id="a-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#03070c"/>
+      <stop offset="0.55" stop-color="#061b2c"/>
+      <stop offset="1" stop-color="#0a3341"/>
+    </linearGradient>
+    <radialGradient id="a-glow1" cx="0.3" cy="0.62" r="0.42">
+      <stop offset="0" stop-color="#00d8c0" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#00d8c0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="a-glow2" cx="0.74" cy="0.5" r="0.45">
+      <stop offset="0" stop-color="#ff3fb4" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#ff3fb4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="a-skin1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd9c2"/>
+      <stop offset="1" stop-color="#c98b74"/>
+    </linearGradient>
+    <linearGradient id="a-skin2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8fff7"/>
+      <stop offset="1" stop-color="#7ec9b8"/>
+    </linearGradient>
+    <linearGradient id="a-skin3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3d4ff"/>
+      <stop offset="1" stop-color="#9a6bd1"/>
+    </linearGradient>
+    <linearGradient id="a-hair1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#132533"/>
+      <stop offset="1" stop-color="#050a10"/>
+    </linearGradient>
+    <linearGradient id="a-hair2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b4a52"/>
+      <stop offset="1" stop-color="#071316"/>
+    </linearGradient>
+    <linearGradient id="a-hair3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#432c5c"/>
+      <stop offset="1" stop-color="#140b1e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="1000" fill="url(#a-bg)"/>
+  <rect width="1200" height="1000" fill="url(#a-glow1)"/>
+  <rect width="1200" height="1000" fill="url(#a-glow2)"/>
+
+  <g opacity="0.18" stroke="#9ff7e6" stroke-width="1" fill="none">
+    <circle cx="640" cy="560" r="300"/>
+    <circle cx="640" cy="560" r="380"/>
+    <circle cx="640" cy="560" r="460"/>
+    <path d="M160 560H1120M640 120V980"/>
+  </g>
+
+  <g font-family="Inter, Arial, Helvetica, sans-serif">
+    <text x="80" y="170" fill="#94ffaf" font-size="20" letter-spacing="6">02 / AI CHARACTERS</text>
+    <text x="76" y="284" fill="#ffffff" font-size="96" font-weight="700" letter-spacing="-3">AI CHARACTERS</text>
+    <text x="80" y="336" fill="#9ff7e6" font-size="24" letter-spacing="7">GENERATION &amp; ANIMATION</text>
+    <text x="80" y="432" fill="#c3e9e2" font-size="22" opacity="0.7">Consistent identities.</text>
+    <text x="80" y="468" fill="#c3e9e2" font-size="22" opacity="0.7">Built to move and tell stories.</text>
+  </g>
+
+  <g>
+    <g transform="translate(505 250)">
+      <ellipse cx="120" cy="690" rx="170" ry="26" fill="#000000" opacity="0.4"/>
+      <path d="M20 690C20 590 70 540 120 540C170 540 220 590 220 690Z" fill="#0b1a24"/>
+      <rect x="96" y="440" width="48" height="130" rx="24" fill="url(#a-skin1)"/>
+      <ellipse cx="120" cy="356" rx="112" ry="132" fill="url(#a-skin1)"/>
+      <path d="M8 340C8 232 56 176 120 176C184 176 232 232 232 340C232 296 206 262 176 252C152 300 88 300 64 252C34 262 8 296 8 340Z" fill="url(#a-hair1)"/>
+      <path d="M8 340C4 402 20 448 44 470C32 424 32 380 40 344Z" fill="url(#a-hair1)"/>
+      <path d="M232 340C236 402 220 448 196 470C208 424 208 380 200 344Z" fill="url(#a-hair1)"/>
+      <ellipse cx="80" cy="372" rx="12" ry="8" fill="#1a2c38"/>
+      <ellipse cx="160" cy="372" rx="12" ry="8" fill="#1a2c38"/>
+      <path d="M96 424C108 436 132 436 144 424" stroke="#8d4b41" stroke-width="6" stroke-linecap="round" fill="none"/>
+      <path d="M200 310C220 322 232 342 236 366" stroke="#00e0c6" stroke-width="5" fill="none" opacity="0.8"/>
+    </g>
+
+    <g transform="translate(790 320) scale(0.82)">
+      <ellipse cx="120" cy="690" rx="170" ry="26" fill="#000000" opacity="0.35"/>
+      <path d="M20 690C20 590 70 540 120 540C170 540 220 590 220 690Z" fill="#13262b"/>
+      <rect x="96" y="440" width="48" height="130" rx="24" fill="url(#a-skin2)"/>
+      <ellipse cx="120" cy="356" rx="112" ry="132" fill="url(#a-skin2)"/>
+      <path d="M8 340C8 232 56 176 120 176C184 176 232 232 232 340C232 296 206 262 176 252C152 300 88 300 64 252C34 262 8 296 8 340Z" fill="url(#a-hair2)"/>
+      <path d="M8 340C4 402 20 448 44 470C32 424 32 380 40 344Z" fill="url(#a-hair2)"/>
+      <path d="M232 340C236 402 220 448 196 470C208 424 208 380 200 344Z" fill="url(#a-hair2)"/>
+      <ellipse cx="80" cy="372" rx="12" ry="8" fill="#1d4a4a"/>
+      <ellipse cx="160" cy="372" rx="12" ry="8" fill="#1d4a4a"/>
+      <path d="M96 424C108 436 132 436 144 424" stroke="#4f8f88" stroke-width="6" stroke-linecap="round" fill="none"/>
+      <path d="M36 330C18 344 8 364 6 388" stroke="#ff3fb4" stroke-width="5" fill="none" opacity="0.85"/>
+    </g>
+
+    <g transform="translate(245 320) scale(0.82)">
+      <ellipse cx="120" cy="690" rx="170" ry="26" fill="#000000" opacity="0.35"/>
+      <path d="M20 690C20 590 70 540 120 540C170 540 220 590 220 690Z" fill="#1c1329"/>
+      <rect x="96" y="440" width="48" height="130" rx="24" fill="url(#a-skin3)"/>
+      <ellipse cx="120" cy="356" rx="112" ry="132" fill="url(#a-skin3)"/>
+      <path d="M8 340C8 232 56 176 120 176C184 176 232 232 232 340C232 296 206 262 176 252C152 300 88 300 64 252C34 262 8 296 8 340Z" fill="url(#a-hair3)"/>
+      <path d="M8 340C4 402 20 448 44 470C32 424 32 380 40 344Z" fill="url(#a-hair3)"/>
+      <path d="M232 340C236 402 220 448 196 470C208 424 208 380 200 344Z" fill="url(#a-hair3)"/>
+      <ellipse cx="80" cy="372" rx="12" ry="8" fill="#2a1b3b"/>
+      <ellipse cx="160" cy="372" rx="12" ry="8" fill="#2a1b3b"/>
+      <path d="M96 424C108 436 132 436 144 424" stroke="#6d4a85" stroke-width="6" stroke-linecap="round" fill="none"/>
+      <path d="M204 330C222 344 232 364 234 388" stroke="#00e0c6" stroke-width="5" fill="none" opacity="0.75"/>
+    </g>
+  </g>
+
+  <g fill="#94ffaf" opacity="0.9">
+    <circle cx="1090" cy="190" r="6"/>
+    <circle cx="1124" cy="214" r="4"/>
+    <circle cx="1060" cy="230" r="3"/>
+  </g>
+</svg>
